@@ -1,0 +1,249 @@
+/* Estilos generales del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    margin: 0;
+    padding: 0;
+    color: #333;
+    text-align: center;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el encabezado */
+header {
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #ff4081;
+    font-size: 2.5em;
+    margin: 0;
+    padding: 10px;
+    border-bottom: 2px solid #ff4081;
+}
+
+/* Estilos para la sección de introducción */
+.intro img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.intro p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+/* Estilos para la galería de recuerdos */
+.gallery {
+    margin: 40px 0;
+}
+
+.gallery h2 {
+    color: #ff4081;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.gallery-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    width: 250px;
+    height: 250px;
+    display: inline-block;
+}
+
+/* Ajustes para el contenedor de la imagen */
+.black-box {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Estilos para las imágenes dentro del contenedor */
+.black-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    border-radius: 0;
+    position: absolute;
+    opacity: 0; /* Inicialmente oculta */
+    object-position: left center; /* Ajusta la posición de la imagen dentro del contenedor */
+}
+
+/* Mostrar imagen activa */
+.black-box img.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Estilos para el texto de la imagen */
+.black-box .caption {
+    color: white;
+    position: relative;
+    bottom: 10px;
+    left: 45%;
+    transform: translateX(-50%);
+    width: calc(100% - 20px);
+    text-align: center;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+/* Ocultar el texto cuando la imagen está activa */
+.black-box img.active + .caption {
+    opacity: 0;
+}
+
+/* Estilos para el botón de sorpresa */
+button {
+    background-color: #f3233f; /* Rosa pastel */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 20px;
+    position: relative;
+}
+
+/* Efecto de hover en el botón */
+button:hover {
+    background-color: #f29cbb; /* Rosa más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Efecto de aumento */
+}
+
+/* Efecto al hacer clic en el botón */
+button:active {
+    background-color: #f17a8a; /* Rosa más oscuro al hacer clic */
+    transform: scale(0.98); /* Efecto de presión */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra interna */
+}
+
+/* Estilos para el mensaje de sorpresa */
+#mensaje-sorpresa {
+    display: none; /* Inicialmente oculto */
+    margin-top: 20px;
+    font-size: 1.5em; /* Tamaño de fuente mayor */
+    color: #555;
+    background-color: #f9e1e3; /* Fondo rosa claro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+    transition: opacity 0.5s ease; /* Transición suave */
+    opacity: 0; /* Inicialmente oculto */
+    text-align: center; /* Centrar texto */
+}
+
+/* Mostrar el mensaje con animación */
+#mensaje-sorpresa.show {
+    display: block;
+    opacity: 1; /* Hacer visible */
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Estilos para el botón de corazón/pera */
+#corazon {
+    background: transparent;
+    border: none;
+    font-size: 3em; /* Tamaño del ícono */
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+/* Animación de pulso */
+@keyframes pulso {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Estilos para el ícono de pera y corazón */
+.icon {
+    display: none; /* Ocultar ambos íconos por defecto */
+    position: absolute;
+    top:-100%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    animation: pulso 2s infinite; /* Aplicar animación de pulso */
+}
+
+/* Estilos para el ícono de pera */
+.icon.pera {
+    display: block; /* Mostrar pera por defecto */
+}
+
+/* Estilos para el ícono de corazón */
+.icon.corazon {
+    display: none; /* Ocultar corazón por defecto */
+}
+
+/* Estilo cuando el corazón/pera está activado */
+#corazon.clicked .icon.pera {
+    display: none;
+}
+
+#corazon.clicked .icon.corazon {
+    display: block;
+}
+
+/* Estilos para el contenedor de la sorpresa */
+#sorpresa {
+    display: none; /* Inicialmente oculto */
+    margin-top: 20px;
+    font-size: 1.2em; /* Tamaño de fuente mayor */
+    color: #555;
+    background-color: #f9e1e3; /* Fondo rosa claro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+    text-align: center; /* Centrar texto e imagen */
+}
+
+/* Imagen dentro del contenedor de la sorpresa */
+.sorpresa-img {
+    max-width: 100%;
+    height: 500px;
+    border-radius: 10px;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>¡Feliz Cumpleaños, Gis!</h1>
+        </header>
+        <main>
+            <section class="intro">
+                <img src="imagen-de-cumpleaños.jpg" alt="Feliz Cumpleaños">
+                <p>Te deseo de corazón que te lo pases increíble en tu día. Te amo muchisimo.</p>
+            </section>
+            
+            <section class="gallery">
+                <h2>Recuerdos Especiales</h2>
+                <div class="gallery-row">
+                    <div class="gallery-item" onclick="toggleImage(this)">
+                        <div class="black-box">
+                            <img src="imagen1.jpg" alt="Recuerdo 1" class="hidden">
+                            <p class="caption">Nuestra primera foto juntos.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="toggleImage(this)">
+                        <div class="black-box">
+                            <img src="imagen2.jpg" alt="Recuerdo 2" class="hidden">
+                            <p class="caption">Tú y tu increible sonrisa siendo feliz.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-row">
+                    <div class="gallery-item" onclick="toggleImage(this)">
+                        <div class="black-box">
+                            <img src="imagen3.jpg" alt="Recuerdo 3" class="hidden">
+                            <p class="caption">Un día increible.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="toggleImage(this)">
+                        <div class="black-box">
+                            <img src="imagen4.jpg" alt="Recuerdo 4" class="hidden">
+                            <p class="caption">Una semana como novios hicimos este dia.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <button onclick="mostrarMensaje()">Haz clic aquí para una sorpresa</button>
+            <div id="mensaje-sorpresa">
+                <p>Eres mi lugar seguro siempre y la persona en la que más confío, te adoro Gis.
+                     MUCHAS FELICIDADES RATIÑA!,
+                     te deseo todo lo mejor en esta vida, ojala muchos años más juntos.(Haz click en la pera que veo que te lo saltas rata)</p>
+            </div>
+            
+            <button id="corazon" onclick="animarCorazon()">
+                <span class="icon pera">🍐</span>
+                <span class="icon corazon">❤️</span>
+            </button>
+            <div id="sorpresa">
+                <img src="imagen-sorpresa.jpg" alt="Sorpresa" class="sorpresa-img">
+                <p>Bueno reina, espero que no te haya parecido esto excesivamente cursi jajajaja,
+                    espero que te haya gustado que he tenido que aprender a hacer esto que no tenía ni idea.
+                     Eres lo mejor que me ha pasado y ojalá poder seguir estando juntos muchisimo más, te quiero más
+                     que a nada en este mundo, y eres super especial para mí, desde el primer momento supe que ibas a ser 
+                     esa persona que llegaría a mi vida para no irse en mucho tiempo y poder ser felices juntos,
+                     te amo muchisimo Gisela, pasatelo genial en tus 18 y sé muy feliz, te quiero!. Pd: esta foto, es la primera que subimos a mejos ratiña.
+                </p>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 Carlitos</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
